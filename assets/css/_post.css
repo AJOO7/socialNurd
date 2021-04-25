@@ -1,0 +1,64 @@
+.postLi {
+    padding: 10px;
+    background-color: #bedcfa;
+    margin: 10px;
+    border-radius: 5px;
+    opacity: 0.95;
+}
+
+.delete-post-button {
+    position: absolute;
+    right: 16.25vw;
+    z-index: 1;
+}
+
+.post-content {}
+
+.post-user-name {}
+
+.post-user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.post-user-desc {
+    position: relative;
+    left: 40px;
+    top: -15px;
+
+}
+
+.post-content {
+    width: 97%;
+    margin: 0 2%;
+    padding: 10px;
+    word-wrap: break-word;
+    background-color: whitesmoke;
+    border-radius: 8px;
+
+}
+
+.toggle-like-button {
+    all: none;
+    /* text-decoration: none; */
+    color: crimson;
+}
+
+.post-comments form {
+    margin: 3%;
+}
+
+
+.form-comment-submit {
+    width: 5%;
+}
+
+.form-comment-content {
+    background: inherit;
+    width: 90%;
+    border: none;
+    border-bottom: lightslategray solid 2px;
+    ;
+}

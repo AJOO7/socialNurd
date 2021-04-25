@@ -1,0 +1,27 @@
+#home-container {
+    /* background-image: url('../images/Capture.PNG'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/wall.jpg');
+    /* background-attachment: fixed; */
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
+.post-li {
+    width: 70%;
+    min-height: 89vh;
+}
+
+#posts-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#posts-list-container ul {
+    list-style: none;
+}

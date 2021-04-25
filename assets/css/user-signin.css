@@ -1,0 +1,51 @@
+.signin-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/wall.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.signin-box {
+    margin: 0 40vw;
+    position: absolute;
+    width: 300px;
+    top: 25vh;
+    padding: 10px;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    border-radius: 10px;
+    /* border: solid 1px #008cf9; */
+
+}
+
+.signin-header {
+    padding: 10px;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.signin-form form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.signin-form form input {
+    margin: 5px;
+    border: unset;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    padding: 2px;
+
+}
+
+.signin-form form button {
+    margin: 5px;
+}
+
+.signin-google-oath {
+    padding: 5px;
+    /* position: relative; */
+    text-align: center;
+}

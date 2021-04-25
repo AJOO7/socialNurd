@@ -1,0 +1,31 @@
+.commentItem {
+    padding: 4px;
+    margin: 0 10% 0 0;
+}
+
+.commentItem p {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    word-wrap: break-word;
+}
+
+.delete-comment-button {
+    position: absolute;
+    right: 22.8vw;
+}
+
+.comment-user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.comment-user-desc {
+    position: relative;
+    left: 40px;
+    top: -15px;
+
+}
