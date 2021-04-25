@@ -1,0 +1,40 @@
+.index-container {
+    background-image: url('../images/wall.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.inner-container {
+    margin: 0 15vw;
+    /* position: relative; */
+    /* top: -10%; */
+}
+
+.index-header {
+    position: relative;
+    font-size: 10vw;
+    text-align: center;
+}
+
+.index-intro {
+    padding: 15px;
+}
+
+.index-animation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.index-animation button {
+    margin: 5%;
+    background-color: #008cf9;
+}
