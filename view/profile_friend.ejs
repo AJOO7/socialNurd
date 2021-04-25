@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/css/profile.css" />
+<div class="profile-container">
+  <div class="profile-main">
+    <div class="profile-img">
+      <img src="<%=profile_user.avatar%>" alt="<%=profile_user.name%>" />
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-info">
+        <p>
+          NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=user.name%>
+        </p>
+        <p>
+          EMAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=profile_user.email%>
+        </p>
+        <p>
+          DOB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=profile_user.dob%>
+        </p>
+        <p>COUNTRY&nbsp;&nbsp;&nbsp;<%=profile_user.country%></p>
+        <p>
+          BIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=profile_user.bio%>
+        </p>
+      </div>
+    </div>
+    <div class="userfollowing">
+      <ul class="userli">
+        <% profile_user.friends.forEach(function(value, index, array) {%>
+        <li>
+          <a href="/users/profile/<%= value.id %>">
+            <img src="<%= value.avatar %>" alt="" /> </a
+          ><%= value.name %>
+        </li>
+        <% })%>
+      </ul>
+      <div class="down-arrow">
+        <i class="fas fa-arrow-circle-down fa-2x"></i>
+      </div>
+    </div>
+    <div>
+      <button
+        class="post-button"
+        onclick="location.href='/users/mypost/<%=profile_user.id%>';"
+      >
+        Posts
+      </button>
+    </div>
+    <div>
+      <%if(locals.user.id!=profile_user.id){%> <%if(Present==1){%>
+      <button
+        type="submit"
+        onclick="location.href='/users/profile/unfollow/<%=profile_user.id%>';"
+      >
+        Unfollow
+      </button>
+      <%}else{%>
+      <button
+        type="submit"
+        onclick="location.href='/users/profile/follow/<%=profile_user.id%>';"
+      >
+        Follow
+      </button>
+      <%}%> <%}%> <%if(locals.user.id==profile_user.id){%>
+      <button onclick="location.href='/users/profile';">Edit</button>
+      <%}%>
+    </div>
+  </div>
+</div>

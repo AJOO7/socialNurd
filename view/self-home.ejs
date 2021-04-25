@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/user-home.css" />
+<div id="home-container">
+  <br />
+  <br />
+  <br />
+  <div id="posts-list-container">
+    <ul class="post-li">
+      <% for(post of posts){ %> <%- include('_self_post') -%> <%} %>
+    </ul>
+    <br /><br />
+  </div>
+</div>
+
+<!-- importing this script for creating the comments -->
+<script src="/js/home_post_comments.js"></script>
+<script src="/js/home_posts.js"></script>
+<script src="js/toggle_likes.js"></script>
+<script>
+  $(".toggle-like-button").each(function () {
+    let self = this;
+    let toggleLike = new ToggleLike(self);
+  });
+</script>

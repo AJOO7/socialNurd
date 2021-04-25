@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/profile.css" />
+<div class="profile-container">
+  <div class="profile-main">
+    
+    
+      <h3 style="text-align: center">Anything new?</h3>
+      <a href="/users/profile/<%= user.id %>">
+        <img class="user-img" src="<%=user.avatar%>" alt="<%=user.name%>" width="100" /></a>
+    
+      <div class="update-form">
+        <form
+          action="/users/update/<%=user.id%>"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+        
+        <div class="update-form-component">
+          <small> PROFILE PHOTO</small>
+          <br>
+          <input  type="file" name="avatar" />
+         
+        </div>
+          <div class="update-form-component">
+            <small>USERNAME</small>
+            <br />
+            <input type="text" name="name" value="<%=user.name%>" required />
+          </div>
+          <div class="update-form-component">
+            <small>EMAIL</small>
+            <br>
+            <%=user.email%>
+          </div>
+          <div class="update-form-component">
+            <small>DOB</small>
+          <br />
+          <input type="text" name="dob" value="<%=user.dob%>" />
+          </div>
+          <div class="update-form-component">
+            <small>COUNTRY</small>
+          <br />
+          <input type="text" name="country" value="<%=user.country%>" />
+          </div>
+          <div class="update-form-component">
+            <small>BIO</small>
+          <br />
+          <textarea name="bio" type="text" cols="57" rows="5" ><%=user.bio%></textarea>
+            
+          </div>
+         
+          <input style="width: 10%;" class="profile-update-btn" type="submit" value="update" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

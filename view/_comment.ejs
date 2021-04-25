@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/_comment.css" />
+<li id="comment-<%= comment._id %>" class="commentItem">
+  <p>
+    <% if (locals.user.id == comment.user._id){ %>
+
+    <small>
+      <a class="delete-comment-button" href="/comment/destroy/<%= comment.id %>"
+        ><img
+          src="https://www.flaticon.com/svg/static/icons/svg/1828/1828843.svg"
+          alt="X"
+          style="height: 13px; width: 13px"
+      /></a>
+    </small>
+    <% } %>
+    <a href="/users/profile/<%= comment.user._id %>"
+      ><img class="comment-user-avatar" src="<%=comment.user.avatar%>" alt="" />
+    </a>
+
+    <small> <%= comment.user.name%> </small>
+    <!-- <small class="post-user-time"> <%= comment.createdAt %> </small> -->
+
+    <br />
+    <%= comment.content %>
+    <br />
+    <small>
+      <% if (locals.user){ %>
+      <button
+        class="toggle-like-button"
+        data-likes="<%= comment.likes.length %>"
+        href="/likes/toggle/?id=<%=comment._id%>&type=comment"
+      >
+        <%= comment.likes.length %> Likes
+      </button>
+
+      <% }else{ %> <%= comment.likes.length %> Likes <% } %>
+    </small>
+  </p>
+</li>

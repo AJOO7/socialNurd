@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <%- style   %>
+</head>
+
+<body>
+    <header >
+        <nav class="navbar navbar navbar-fixed-top" style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))" >
+            <div class="container-fluid">
+
+                <%if(locals.user){%>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand"  href="/users"><b><img src="/images/nurd.png" style="
+                            position: absolute;
+                            left: 10px;
+                            top: -5px;
+                            height: 60px;
+                            width: 165px;
+                        "></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <form class="navbar-form navbar-left" action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
+                                  <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <li class=""><a href="/users"><i class="fas fa-home"></i></a></li>
+                            <li class=""><a href="/users/createPost"><i class="fas fa-plus-circle"></i></a></li>
+
+                            <li>
+                                <a href="/users/allusers"><i class="fas fa-user-friends"></i></a>
+                            </li>
+                            <!-- <li><a href="/users/message"><i class="fab fa-telegram-plane"></i></a></li> -->
+                            <!-- <li><a href="/users/editor"><i class="fas fa-laptop-code"></i></a></li> -->
+                            <li><a href="/users/profile/<%=locals.user.id%>"><span class="glyphicon glyphicon-user"></span></a></li>
+
+                            <li><a href="/users/sign-out"><i class="fas fa-sign-out-alt"></i></a></li>
+
+                        </ul>
+                    </div>
+
+                    <%}else{%>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"><b><img src="/images/nurd.png" style="
+                                position: absolute;
+                                left: 10px;
+                                top: -5px;
+                                height: 60px;
+                                width: 165px;
+                            "></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li>
+                                    <a href="/users/sign-up"><i class="fas fa-user-plus"></i></a>
+                                </li>
+                                <li class="">
+                                    <a href="/users/sign-in"><i class="fas fa-sign-in-alt"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <%}%>
+            </div>
+        </nav>
+    </header>
+    <%-body%>
+        <footer>
+            <nav class="navbar navbar navbar-fixed-bottom " style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))" >
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1"></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-google"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-instagram"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-facebook-f"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-github"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-linkedin"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-discord"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fab fa-twitter"></i></div>
+                            <div class="col-sm-1" style="text-align: center;padding: 3px;"><i class="fas fa-hashtag"></i></div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4" style="text-align: center;padding: 3px;">@AJ007 All rights reserved</div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+
+            </nav>
+        </footer>
+        <script>
+            <% if (flash.success && flash.success.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.success %>",
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+
+            }).show();
+            <%} %>
+
+            <% if (flash.error && flash.error.length > 0) {%>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.error %>",
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1500
+
+            }).show();
+            <%} %>
+        </script>
+        <%- script %>
+
+</body>
+
+
+</html>

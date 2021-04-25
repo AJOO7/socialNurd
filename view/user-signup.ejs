@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/user-signup.css" />
+<div class="signup-container"></div>
+<div class="signup-box">
+  <div class="signup-header">Sign Up</div>
+  <div class="signup-form">
+    <form action="/users/create" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm Password"
+        required
+      />
+      <button
+        style="background-color: #008cf9; color: rgb(255, 255, 255)"
+        type="submit"
+        class="btn"
+        style="width: 100%"
+        value="Sign Up"
+      >
+        <i class="fas fa-user-plus"></i> Sign up
+      </button>
+    </form>
+  </div>
+  <div class="signup-google-oath">
+    <button
+      type="button"
+      class="btn btn-danger"
+      style="width: 100%"
+      onclick="location.href='/users/auth/google';"
+    >
+      <i class="fab fa-google"></i> Google
+    </button>
+  </div>
+</div>

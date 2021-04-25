@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/user-signin.css" />
+<div class="signin-container"></div>
+<div class="signin-box">
+  <div class="signin-header">Welcome Back</div>
+  <div class="signin-form">
+    <form action="/users/create-session" method="POST">
+      <input type="email" name="email" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Password" required />
+
+      <button
+        style="background-color: #008cf9; color: rgb(255, 255, 255)"
+        type="submit"
+        class="btn"
+        style="width: 100%"
+        value="Sign in"
+      >
+        <i class="fas fa-sign-in-alt"></i> Sign in
+      </button>
+    </form>
+  </div>
+  <div class="signin-google-oath">
+    <button
+      type="button"
+      class="btn btn-danger"
+      style="width: 100%"
+      onclick="location.href='/users/auth/google';"
+    >
+      <i class="fab fa-google"></i> Google
+    </button>
+  </div>
+</div>
